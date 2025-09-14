@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Daftar calon
+var calon = ["Iqbal", "Dede", "Deden"];
+
+// Array untuk menyimpan hasil voting
+var hasilVoting = [];
+
+// Jumlah pemilih
+var jumlahPemilih = 16;
+
+// Looping pemilih
+for (var i = 0; i < jumlahPemilih; i++) {
+    var pilih = prompt(
+        "Pilih ketua kelas (ketik angka): \n1. Iqbal\n2. Dede\n3. Deden"
+    );
+
+    if (pilih == "1") {
+        hasilVoting.push("Iqbal");
+        console.log("Peserta " + (i + 1) + " memilih Iqbal");
+    } else if (pilih == "2") {
+        hasilVoting.push("Dede");
+        console.log("Peserta " + (i + 1) + " memilih Dede");
+    } else if (pilih == "3") {
+        hasilVoting.push("Deden");
+        console.log("Peserta " + (i + 1) + " memilih Deden");
+    } else {
+        hasilVoting.push("Golput");
+        console.log("Peserta " + (i + 1) + " tidak memilih (golput)");
+    }
+}
+
+// Setelah semua memilih → hitung jumlah suara
+var iqbal = hasilVoting.filter(v => v === "Iqbal").length;
+var dede = hasilVoting.filter(v => v === "Dede").length;
+var deden = hasilVoting.filter(v => v === "Deden").length;
+var golput = hasilVoting.filter(v => v === "Golput").length;
+
+// Tampilkan hasil akhir
+console.log("=================================");
+console.log("Hasil Akhir Voting Ketua Kelas:");
+console.log("Iqbal : " + iqbal + " suara");
+console.log("Dede  : " + dede + " suara");
+console.log("Deden : " + deden + " suara");
+console.log("Golput: " + golput + " suara");
+
+    </script>
+</body>
+</html>

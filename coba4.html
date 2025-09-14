@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Daftar calon
+var calon = ["Iqbal", "Dede", "Deden"];
+
+// Array untuk menyimpan hasil voting
+var hasilVoting = [];
+
+// Jumlah pemilih
+var jumlahPemilih = 16;
+
+// Proses voting
+for (var i = 0; i < jumlahPemilih; i++) {
+    var pilih = prompt(
+        "Pilih ketua kelas (ketik angka): \n1. Iqbal\n2. Dede\n3. Deden"
+    );
+
+    if (pilih == "1") {
+        hasilVoting.push("Iqbal");
+    } else if (pilih == "2") {
+        hasilVoting.push("Dede");
+    } else if (pilih == "3") {
+        hasilVoting.push("Deden");
+    } else {
+        hasilVoting.push("Golput");
+    }
+}
+
+// Fungsi tampilkan hasil dengan for
+function tampilHasil(nama) {
+    var jumlah = hasilVoting.filter(v => v === nama).length;
+    var angka = "";
+
+    // pakai for untuk bikin deretan "1"
+    for (var i = 0; i < jumlah; i++) {
+        angka += "1 ";
+    }
+
+    console.log(nama + " = " + angka.trim() + " = " + jumlah);
+}
+
+// Tampilkan hasil akhir
+console.log("Hasil Voting Ketua Kelas:");
+tampilHasil("Iqbal");
+tampilHasil("Dede");
+tampilHasil("Deden");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PR RIBET</title>
+</head>
+<body>
+    <script>
+
+        var calon = ['iqbal', 'dede', 'deden'];
+        var hasilVoting = [];
+        
+        for (var i=0; i<16; i++) {
+            var voting = prompt ("Masukan pilihan anda : (1) iqbal - (2) dede - (3) deden) ?");
+                if (voting === '1') {
+                    hasilVoting.push('Iqbal');
+
+                } else if (voting === '2') {
+                    hasilVoting.push('Dede');
+
+                } else if (voting === '3') {
+                    hasilVoting.push('Deden');
+
+                } else {
+                    alert ("Voting anda invalid, maka dianggap golput!!");
+                    hasilVoting.push('Golput');
+                }
+
+                function hasilSuara (nama) {
+                    var jumlah = 0;
+                    var angka = '';
+                    
+                    for (var i=0; i<hasilVoting.length; i++) {
+                        if (hasilVoting[i] === nama) {
+                        angka += "I";
+                        }
+                    }
+                    console.log (nama + " = " + angka + " = " + jumlah)
+                }
+        }
+        alert("Voting telah selesai..");
+        console.log("Hasil suara yang diperoleh ketiga calon :");
+        hasilSuara("Iqbal");
+        hasilSuara("Dede");
+        hasilSuara("Deden");
+        hasilSuara("Golput");
+    </script>
+</body>
+</html>

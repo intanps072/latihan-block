@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PR MUDAH</title>
+</head>
+<body>
+    <script>
+
+        var iqbal=[];
+        var dede=[];
+        var deden=[];
+        var golput=[];
+        var hasilVoting = [];
+        
+        for (var i=0; i<16; i++) {
+            var voting = prompt ("Masukan pilihan anda : (1) iqbal - (2) dede - (3) deden) ?");
+                if (voting === '1') {
+                    iqbal.push(voting);
+                    hasilVoting.push(voting);
+
+                } else if (voting === '2') {
+                    dede.push(voting);
+                    hasilVoting.push(voting);
+
+                } else if (voting === '3') {
+                    deden.push(voting);
+                    hasilVoting.push(voting);
+
+                } else {
+                    alert ("Voting anda invalid, maka dianggap golput!!");
+                    golput.push(voting);
+                    hasilVoting.push(voting);
+                }
+
+        }
+        alert("Voting telah selesai..");
+        console.log("Kumpulan suara : " + "( " + [hasilVoting] + " )");
+        console.log("Hasil suara yang diperoleh ketiga calon :");
+        console.log("Iqbal = " + iqbal.length);
+        console.log("Dede = " + dede.length);
+        console.log("Deden = " + deden.length);
+        console.log("Golput = " + golput.length);
+
+    </script>
+</body>
+</html>
